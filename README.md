@@ -25,5 +25,9 @@ Then execute ```prompter``` and select Login. Use your username and password.
 ### Create a new assistant and channel
 
 
-### Upload prompt
+### Publish a prompt
+
+Publish a prompt by running `prompter --prompt=<prompt> --publish` in your terminal. Note that the prompt must be a valid Handlebars template. See [Handlebars](https://handlebarsjs.com/) for more information.
+If no promptId is provided, the file name will be used as the promptId. If the prompt is already published, it will be updated.
+
 
