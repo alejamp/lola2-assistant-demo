@@ -1,9 +1,11 @@
-from lola import LolaSDK
-from lola import LolaContext
+from lolapy import LolaSDK
+from lolapy import LolaContext
+from tokens import LOLA_TOKEN_DEMO
 
-
-token = "..."
-lola = LolaSDK(lola_token=token, webhook_url='http://localhost:5000')
+lola = LolaSDK(
+    lola_token=LOLA_TOKEN_DEMO, 
+    prompter_url='https://lola-dev-v2.ue.r.appspot.com/',
+    webhook_url='https://1d29-181-168-225-209.ngrok-free.app')
 
 
 @lola.on_command('get_cryptocurrency_price')

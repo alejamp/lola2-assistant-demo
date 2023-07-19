@@ -1,10 +1,13 @@
-from lola import LolaSDK
-from lola import LolaContext
+from lolapy import LolaSDK
+from lolapy import LolaContext
+from tokens import LOLA_TOKEN_CTOS
 import threading
 
 
-token = "..."
-lola = LolaSDK(lola_token=token, webhook_url='http://localhost:5000')
+lola = LolaSDK(
+    lola_token=LOLA_TOKEN_CTOS, 
+    prompter_url='https://lola-dev-v2.ue.r.appspot.com/',
+    webhook_url='https://1d29-181-168-225-209.ngrok-free.app')
 
 def do_simething_heavy_async(ctx: LolaContext, seconds=10):
     print(f'Doing something heavy for {seconds} seconds')
