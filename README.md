@@ -67,6 +67,21 @@ Lola2 utilizes [Handlebars](https://handlebarsjs.com/) templates to generate pro
 
 VS Code has a handlebars extension that can be used for syntax highlighting and snippets. Check recommended extensions for this project.
 
+Prompts context variables are:
+- date: current date
+- state: current conversation state. This is an object that contains any assistant implementation related data. For example, if the assistant is a ticketing assistant, the state may contain the selected movie, the selected seats, etc.
+- message: the customer's last message to the assistant. Useful for embeddings queries.
+
+In handlebars, you can use the `{{#if}}` helper to conditionally render a block. For example, if you want to render the customer's name if the state variable `name` exists.
+
+```handlebars
+{{#if state.name}}
+The customer's name is {{state.name}}
+{{/if}}
+```
+
+Conditionals do not supports operations, so you can't do something like `{{#if state.name == 'John'}}`. 
+In future versions, we will add support for operations.
 
 ## Repositories
 
