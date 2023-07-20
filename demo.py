@@ -5,7 +5,7 @@ from tokens import LOLA_TOKEN_DEMO
 lola = LolaSDK(
     lola_token=LOLA_TOKEN_DEMO, 
     prompter_url='https://lola-dev-v2.ue.r.appspot.com/',
-    webhook_url='https://1d29-181-168-225-209.ngrok-free.app')
+    webhook_url='https://6de8-181-168-225-209.ngrok-free.app')
 
 
 @lola.on_command('get_cryptocurrency_price')

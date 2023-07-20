@@ -1,11 +1,11 @@
 from lolapy import LolaSDK
 from lolapy import LolaContext
-from tokens import SUNDEV_CINEMARK_TICKETERA_TOKEN
+from tokens import SUNDEVS_CINEMARK_TICKETERA_TOKEN
 
 lola = LolaSDK(
-    lola_token=SUNDEV_CINEMARK_TICKETERA_TOKEN, 
+    lola_token=SUNDEVS_CINEMARK_TICKETERA_TOKEN, 
     prompter_url='https://lola-dev-v2.ue.r.appspot.com/',
-    webhook_url='https://1d29-181-168-225-209.ngrok-free.app')
+    webhook_url='https://6de8-181-168-225-209.ngrok-free.app')
 
 
 @lola.on_command('get_cryptocurrency_price')
