@@ -43,7 +43,7 @@ Publish a prompt by running `prompter --prompt=<prompt> --publish` in your termi
 If no promptId is provided, the file name will be used as the promptId. If the prompt is already published, it will be updated.
 
 
-### Configure Assistant handlers
+### Configure Assistant into lolapy
 
 This project requires a token.py file, which contains the following variables:
 
