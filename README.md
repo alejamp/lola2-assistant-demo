@@ -83,6 +83,23 @@ The customer's name is {{state.name}}
 Conditionals do not supports operations, so you can't do something like `{{#if state.name == 'John'}}`. 
 In future versions, we will add support for operations.
 
+
+
+## Lola Assistant-Channel-Client Architecture
+
+<p align="center">
+  <img src="https://firebasestorage.googleapis.com/v0/b/numichat.appspot.com/o/Screen%2520Shot%25202023-07-20%2520at%252012.05.40.png?alt%253Dmedia%2526token%253D4c21fe56-02b1-4b03-9dca-40f10fb61601" alt="map">
+</p>
+
+The assistant is the main component of the architecture. It is responsible for handling the customer's messages and generating the responses. It defines the Prompt and the NLP Agent to use. It also provides the token needed bu lolapy to connect to and gather events and command from the customer's conversation.
+
+An assistant can have multiple channels. A channel is a way to connect to the customer. For example, a Telegram channel, a Facebook Messenger channel, a WhatsApp channel, etc. Each channel has its own conversation state, so the assistant must be able to handle multiple conversation states.
+
+A Tenant is can have multiple assistants. For example, a tenant can have a ticketing assistant, a banking assistant, a food delivery assistant, etc. Each assistant can have multiple channels.
+
+Tenant is the main entity. It is the owner of the assistants and channels. It also provides the token needed by prompter-cli to connect to the prompter server and administrate the assistants and channels.
+
+
 ## Repositories
 
 [lolapy](https://github.com/alejamp/lola-py-sdk)
