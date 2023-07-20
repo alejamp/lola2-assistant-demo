@@ -61,6 +61,13 @@ SUNDEVS_CINEMARK_TICKETERA_TOKEN = "..."
 If you have already created the assistant, you can get the tokens from the prompter-cli tool. Execute `prompter` then from menu select Assistant -> Select, then select the assistant and select View Info. The tokens will be displayed.
 
 
+## Prompts
+
+Lola2 utilizes [Handlebars](https://handlebarsjs.com/) templates to generate prompts. The output is a HTML like named PML, Prompt Markup Language. The PML is then rendered on each customer's message using a context object.
+
+VS Code has a handlebars extension that can be used for syntax highlighting and snippets. Check recommended extensions for this project.
+
+
 ## Repositories
 
 [lolapy](https://github.com/alejamp/lola-py-sdk)
