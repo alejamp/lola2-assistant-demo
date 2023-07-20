@@ -2,19 +2,21 @@
 
 ### Requirements
 
-Install lolapy from git using pip
+Python 3.8 or higher
+
+Install **lolapy** from git using pip
 
 ```bash
 pip install "git+https://github.com/alejamp/lola-py-sdk.git"
 ```
 
-### Install dependencies
+### Install Prompter CLI Tool
 
 ```bash
 npm install -g prompter-cli
 ```
 
-set env variables
+set env variables for prompter server url
 
 ```bash
 export PROMPTER_SERVER_URL=[PROMPTER_SERVER_URL]
@@ -22,8 +24,13 @@ export PROMPTER_SERVER_URL=[PROMPTER_SERVER_URL]
 
 Then execute ```prompter``` and select Login. Use your username and password.
 
-### Create a new assistant and channel
+#### Create Assistant
 
+Execute ```prompter``` then from menu select Assistant -> Create New. Input the assistant name and description. Keep `lola` as agent.
+
+#### Create a telegram channel
+
+Execute ```prompter``` then from menu select Channel -> Register New. Then input the token.
 
 ### Publish a prompt
 
