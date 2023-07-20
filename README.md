@@ -38,3 +38,8 @@ Publish a prompt by running `prompter --prompt=<prompt> --publish` in your termi
 If no promptId is provided, the file name will be used as the promptId. If the prompt is already published, it will be updated.
 
 
+
+## Repositories
+
+[lolapy](https://github.com/alejamp/lola-py-sdk)
+[prompter-cli](https://github.com/alejamp/prompter-cli)
