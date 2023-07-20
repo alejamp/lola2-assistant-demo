@@ -43,6 +43,23 @@ Publish a prompt by running `prompter --prompt=<prompt> --publish` in your termi
 If no promptId is provided, the file name will be used as the promptId. If the prompt is already published, it will be updated.
 
 
+### Configure Assistant handlers
+
+This project requires a token.py file, which contains the following variables:
+
+```python
+
+# Telegram channel: https://t.me/[bot_name]
+LOLA_TOKEN_CTOS = "..."
+
+# Telegram channel: https://t.me/[bot_name]
+LOLA_TOKEN_DEMO = "..."
+
+# Telegram channel: https://t.me/[bot_name]
+SUNDEVS_CINEMARK_TICKETERA_TOKEN = "..."
+```
+If you have already created the assistant, you can get the tokens from the prompter-cli tool. Execute `prompter` then from menu select Assistant -> Select, then select the assistant and select View Info. The tokens will be displayed.
+
 
 ## Repositories
 
