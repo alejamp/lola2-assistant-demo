@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/numichat.appspot.com/o/file_16.jpeg?alt=media&token=d29ea9e5-7ed6-43e0-a1a5-e414e554a41d" alt="Logo">
+  <img src="https://firebasestorage.googleapis.com/v0/b/numichat.appspot.com/o/Perf_Lola%2BH.way%20banner.png?alt=media&token=8a0dac42-1f76-4754-ac9c-40a93ba02125" alt="Logo">
 </p>
 
 # Lola2 - Assistant Examples
