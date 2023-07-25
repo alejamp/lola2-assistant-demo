@@ -88,7 +88,7 @@ In future versions, we will add support for operations.
 ## Lola Assistant-Channel-Client Architecture
 
 <p align="center">
-  <img src="https://firebasestorage.googleapis.com/v0/b/numichat.appspot.com/o/Screen%2520Shot%25202023-07-20%2520at%252012.05.40.png?alt%253Dmedia%2526token%253D4c21fe56-02b1-4b03-9dca-40f10fb61601" alt="map">
+  <img src="https://firebasestorage.googleapis.com/v0/b/numichat.appspot.com/o/Screen%20Shot%202023-07-20%20at%2012.05.40.png?alt=media&token=4c21fe56-02b1-4b03-9dca-40f10fb61601" alt="map">
 </p>
 
 The assistant is the main component of the architecture. It is responsible for handling the customer's messages and generating the responses. It defines the Prompt and the NLP Agent to use. It also provides the token needed bu lolapy to connect to and gather events and command from the customer's conversation.
