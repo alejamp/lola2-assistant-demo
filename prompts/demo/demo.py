@@ -1,30 +1,35 @@
 from lolapy import LolaSDK
 from lolapy import LolaContext
-from tokens import SUNDEVS_CINEMARK_TICKETERA_TOKEN
+from tokens import LOLA_TOKEN_DEMO
 
 lola = LolaSDK(
-    lola_token=SUNDEVS_CINEMARK_TICKETERA_TOKEN, 
+    lola_token=LOLA_TOKEN_DEMO, 
     prompter_url='https://lola-dev-v2.ue.r.appspot.com/',
-    webhook_url='https://6de8-181-168-225-209.ngrok-free.app')
+    webhook_url='https://5cf3-181-168-225-209.ngrok-free.app')
 
 
 @lola.on_command('get_cryptocurrency_price')
-def handle_get_cryptocurrency_price(lead, ctx: LolaContext, request):
-    cryptocurrency = request['data']['args']['cryptocurrency']
-    currency = request['data']['args']['currency']
+def handle_get_cryptocurrency_price(lead, ctx: LolaContext, cmd):
+    cryptocurrency = cmd['data']['args']['cryptocurrency']
+    currency = cmd['data']['args']['currency']
 
     # dict with data to return to Lola
     prices = {
         'ETH': 600,
         'BTC': 20000,
         'LTC': 100,
-        'ADA': 1.5        
+        'ADA': 1.5
     }
+
+    # return {'data': prices}
+
+    ctx.messanger.send_typing_action()
+    ctx.messanger.send_text_message(f'Hola amiguito')
 
     # if cryptocurrency is not in prices, return error
     if cryptocurrency not in prices:
         return {'data': f'Cryptocurrency {cryptocurrency} not supported'}
-    
+
     return {'data': f'{cryptocurrency} price in {currency} is {prices[cryptocurrency]}'}
 
 
@@ -42,12 +47,16 @@ def handle_text_message(lead, ctx: LolaContext, msg):
     # This message will be sent to the client
     # But it will not interrupt the flow to the AI
     # Use this to send messages to the client without interrupting the flow
-    ctx.messanger.send_text_message(f'You said1: {msg["text"]}') 
+    # ctx.messanger.send_text_message(f'You said1: {msg["text"]}') 
 
     # Testing send message to client
     # This message will be sent to the client
     # And it will interrupt the flow to the AI
     # return f'You said2: {msg["text"]}'
+
+    if msg['text'].lower() == 'ping':
+        return 'pong'
+    
 
 
 
