@@ -13,8 +13,6 @@ lola = LolaSDK(
 
 
 
-
-
 @lola.on_command('get_billboard')
 def handle_get_cryptocurrency_price(session, ctx: LolaContext, request):
     city = request['data']['args']['city']
@@ -67,18 +65,11 @@ def handle_text_message(session, ctx: LolaContext, msg):
     print(f'Current state: {s}')
     ctx.state.set({'counter': s.get('counter', 0) + 1})
 
-    ctx.timeout.set(session, ctx, 5, '5_seconds_without_message')
+    # old way
+    # ctx.timeout.set(session, ctx, 5, '5_seconds_without_message')
+    # new way, less parameters
+    ctx.set_timeout(5, '5_seconds_without_message')
 
-    # Testing send message to client
-    # This message will be sent to the client
-    # But it will not interrupt the flow to the AI
-    # Use this to send messages to the client without interrupting the flow
-    # ctx.messanger.send_text_message(f'You said1: {msg["text"]}') 
-
-    # Testing send message to client
-    # This message will be sent to the client
-    # And it will interrupt the flow to the AI
-    # return f'You said2: {msg["text"]}'
 
 
 @lola.on_timeout()
