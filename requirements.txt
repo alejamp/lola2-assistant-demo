@@ -1,1 +1,1 @@
-lolapy
+lolapy @ git+https://github.com/alejamp/lola-py-sdk.git
